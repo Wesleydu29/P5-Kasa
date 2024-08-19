@@ -1,15 +1,16 @@
-import '../styles/Header.css'
+import '../styles/Header.scss'
 import LOGO from '../assets/LOGO.png'
+import {NavLink} from "react-router-dom"
 
 function Header() {
     return(
-        <nav className="navbar">
+        <nav className="header">
             <div className="navbar-logo">
                 <img src={LOGO} alt="Logo"></img>
             </div>
             <div className='navbar-link'>
-                <a href='index.html'>Acceuil</a>
-                <a>A Propos</a>
+                <NavLink to="/">Acceuil</NavLink>
+                <NavLink to="/about">A Propos</NavLink>
             </div>
         </nav>
     )

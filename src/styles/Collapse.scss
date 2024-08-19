@@ -1,0 +1,28 @@
+.container-collapse {
+    background-color: #FF6060; /* Ajoutez un fond pour mieux voir les éléments */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.collapse-title {
+    display: flex;
+    justify-content: space-between; /* Aligne les éléments aux extrémités */
+    align-items: center; /* Centre verticalement le titre et l'image */
+    color: white; /* Définit la couleur du texte et de l'image en blanc */
+}
+
+h2 {
+    margin: 0; /* Enlève la marge par défaut du h2 */
+    font-size: 18px; /* Taille de la police du titre */
+}
+
+.arrow {
+    width: 20px; /* Ajustez la taille de l'image */
+    cursor: pointer;
+}
+
+.toggle-content {
+    color: white; /* Assurez-vous que le contenu est également blanc */
+    margin-top: 10px; /* Un petit espace entre le titre et le contenu */
+}

@@ -1,5 +1,6 @@
-import '../styles/Gallery.css'
+import '../styles/Gallery.scss'
 import ApartmentList from '../datas/ApartmentList.json'
+import { Link } from 'react-router-dom'
 
 function Gallery() {
     return(
@@ -8,7 +9,8 @@ function Gallery() {
                     {ApartmentList.map((apartment) => (
                         <li key={apartment.id} className='apartment-card'>
                             <img src={apartment.cover} className='image-card'></img>
-                            <h2>{apartment.title}</h2>
+                            <div className='card-gradient'></div>
+                            <Link to={`/apartment/${apartment.id}`}>{apartment.title}</Link>
                         </li>
                     ))}
 

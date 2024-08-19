@@ -6,10 +6,10 @@
     height: 200px;
     margin-top: 30px;
     color: white;
+    .footer-content {
+        text-align: center;
+        flex-direction: column;
+    
+    }
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-
-}

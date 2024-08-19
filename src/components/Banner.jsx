@@ -1,9 +1,11 @@
-import '../styles/Banner.css'
+import '../styles/Banner.scss'
 
-function Banner() {
+function Banner(props) {
+
     return(
-        <div className="banner">
-            <h1> Chez vous, partout et ailleurs</h1>
+        <div className={`banner ${props.className}`}>
+            <img src={props.src}></img>
+            <h1>{props.title}</h1>
         </div>
 
     )

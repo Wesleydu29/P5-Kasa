@@ -29,7 +29,8 @@
     border-radius: 8px 
 }
 
-.apartment-card h2 {
+.apartment-card a {
+    text-decoration: none;
     position: absolute;
     bottom: 10px; /* Place le titre en bas */
     width: 50%;
@@ -38,4 +39,12 @@
     padding: 10px; /* Espacement interne du titre */
     font-size: 1rem; /* Taille de police du titre */
     border-radius: 0 0 8px 8px; /* Coins arrondis en bas */
+}
+.card-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 30%);
 }
