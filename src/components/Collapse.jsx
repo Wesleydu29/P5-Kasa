@@ -9,7 +9,7 @@ function Collapse({title, content}) {
         setIsOpen(!isOpen);
     };
     return(
-        <div className="container-collapse">
+        <div className="collapse">
             <div className="collapse-title">
                 <h2>{title}</h2>
                 <img src={arrow} alt="arrow" onClick={toggle} className={`arrow ${isOpen ? 'rotate' : ''}`} ></img>

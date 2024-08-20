@@ -3,6 +3,7 @@ import Banner from "../components/Banner"
 import Footer from "../components/Footer"
 import image from "../assets/Image source 2.png"
 import Collapse from "../components/Collapse"
+import '../styles/Collapse.scss'
 
 
 function About() {
@@ -37,8 +38,8 @@ function About() {
         <div>
         <Header/>
         <Banner src={image}/>
-        <div className="toggle-container">
-          <ul>
+        <div>
+          <ul className="container-collapse">
             {aboutData.map(({title, content}) =>(
               <Collapse className="" key={title}
               title={title}

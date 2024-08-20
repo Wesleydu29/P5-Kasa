@@ -4,7 +4,11 @@ import Footer from '../components/Footer';
 import { useParams } from 'react-router-dom';
 import ApartmentList from '../datas/ApartmentList.json';
 import Error from './Error';
-import CarouselBanner from '../components/CarouselBanner'; // Importez le CarouselBanner
+import CarouselBanner from '../components/CarouselBanner';
+import Collapse from '../components/Collapse';
+import Rating from '../components/Listings/Rating';
+import '../styles/ApartmentDetails.scss'
+import ApartmentInfo from '../components/Listings/ApartmentInfo';
 
 
 function ApartmentDetails() {
@@ -22,8 +26,15 @@ function ApartmentDetails() {
     return (
         <div>
             <Header />
-            {/* Utilisez CarouselBanner ici */}
             <CarouselBanner images={apartment.pictures} className="apartment-banner" />
+            <div className="apartment-info-container">
+                <ApartmentInfo title={apartment.title} location={apartment.location} tags={apartment.tags}/>
+                <Rating name={apartment.host.name} rating={apartment.rating} picture={apartment.host.picture}/>
+            </div>
+            <div className="container-collapse-apartment">
+                <Collapse title="description" content={apartment.description}/>
+                <Collapse title="Equipement" content={apartment.equipments.join(', ')}/>
+            </div>
             <Footer />
         </div>
     );

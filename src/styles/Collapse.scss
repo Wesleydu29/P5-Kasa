@@ -1,8 +1,17 @@
 .container-collapse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 25px;
+}
+
+.collapse {
+    width: 70%;
     background-color: #FF6060; /* Ajoutez un fond pour mieux voir les éléments */
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 .collapse-title {
@@ -20,9 +29,21 @@ h2 {
 .arrow {
     width: 20px; /* Ajustez la taille de l'image */
     cursor: pointer;
+    transition: transform 0.3s ease;
+    &.rotate {
+        transform: rotate(180deg);
+    }
 }
 
 .toggle-content {
-    color: white; /* Assurez-vous que le contenu est également blanc */
+    background-color: #F0F0F0;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333; /* Assurez-vous que le contenu est également blanc */
     margin-top: 10px; /* Un petit espace entre le titre et le contenu */
+    transition: max-height 0.3s ease-in-out;
+    &.open{
+        max-height: 500px;
+    }
 }

@@ -1,6 +1,7 @@
 import Header from "../components/Header"
 import '../styles/Error.scss'
 import { Link } from "react-router-dom"
+import Footer from "../components/Footer"
 function Error() {
     return(
         <div>
@@ -12,6 +13,7 @@ function Error() {
                     <Link to="/">retourner sur la page d'acceuil</Link>
                 </div>
             </div>
+            <Footer/>
             
 
         </div>
