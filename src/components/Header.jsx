@@ -9,7 +9,7 @@ function Header() {
                 <img src={LOGO} alt="Logo"></img>
             </div>
             <div className='navbar-link'>
-                <NavLink to="/">Acceuil</NavLink>
+                <NavLink to="/">Accueil</NavLink>
                 <NavLink to="/about">A Propos</NavLink>
             </div>
         </nav>

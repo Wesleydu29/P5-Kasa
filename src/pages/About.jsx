@@ -36,11 +36,11 @@ function About() {
       ];
     return(
         <>
-        <Banner src={image}/>
+        <Banner className="banner-about" src={image}/>
         <div>
           <ul className="container-collapse">
             {aboutData.map(({title, content}) =>(
-              <Collapse className="" key={title}
+              <Collapse key={title}
               title={title}
               content={content}/>
             ))}

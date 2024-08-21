@@ -1,9 +1,11 @@
 .container-collapse-apartment {
     display: flex;
     gap: 30px;
-    margin: 20px;
+    margin-bottom: 40px;
 }
-
+.collapse-apartment {
+    width: 45%;
+}
 .apartment-info-container {
     display: flex;
     justify-content: space-between;

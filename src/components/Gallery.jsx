@@ -3,18 +3,21 @@ import ApartmentList from '../datas/ApartmentList.json'
 import { Link } from 'react-router-dom'
 
 function Gallery() {
-    return(
+    return (
         <div className='gallery-container'>
             <ul className='gallery'>
-                    {ApartmentList.map((apartment) => (
-                        <li key={apartment.id} className='apartment-card'>
-                            <img src={apartment.cover} className='image-card'></img>
+                {ApartmentList.map((apartment) => (
+                    <li key={apartment.id} className='apartment-card'>
+                        <Link to={`/apartment/${apartment.id}`} className='apartment-link'>
+                            <img src={apartment.cover} className='image-card' alt={apartment.title} />
                             <div className='card-gradient'></div>
-                            <Link to={`/apartment/${apartment.id}`}>{apartment.title}</Link>
-                        </li>
-                    ))}
+                            <span className='appartment-title'>{apartment.title}</span>
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </div>
     )
 }
-export default Gallery
+
+export default Gallery;

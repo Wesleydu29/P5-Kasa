@@ -21,6 +21,9 @@ function CarouselBanner({ images }) {
             <img src={images[currentIndex]} alt="Apartment view" className="carousel-image" />
             <button className="carousel-button prev" onClick={handlePrevClick}>‹</button>
             <button className="carousel-button next" onClick={handleNextClick}>›</button>
+            <div className="image-counter">
+                {currentIndex + 1} / {images.length}
+            </div>
         </div>
     );
 }

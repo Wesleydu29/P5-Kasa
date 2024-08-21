@@ -1,36 +1,46 @@
-
 .rating-container {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
+    align-items: flex-end;
+    gap: 20px;
 }
 
 .owner-info {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
-.owner-picture {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.owner-name {
     margin-right: 10px;
 }
 
 .owner-name p {
-    margin: 0;
     color: #FF6060;
+    font-size: 20px;
+    margin: 0;
+}
+
+.owner-picture {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
 .rating-stars {
     display: flex;
-    align-items: center;
 }
-.start-image {
-    width: 20px;
-    height: 20px;
+
+.star {
+    font-size: 24px;
     margin-right: 5px;
 }
+
+.star-full {
+    color: #FF6060; /* Couleur pour les étoiles pleines */
+}
+
+.star-empty {
+    color: #F0F0F0; /* Couleur pour les étoiles vides */
+}
+

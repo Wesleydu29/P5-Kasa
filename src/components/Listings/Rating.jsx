@@ -9,8 +9,9 @@ function Rating({ name, rating, picture }) {
     const [firstName, lastName] = name.split(' ');
 
     // Créez un tableau avec le nombre d'étoiles remplies et vides
-    const fullStars = Array(rating).fill(startActive);
-    const emptyStars = Array(5 - rating).fill(startInactive);
+    const fullStars = Array(Number(rating)).fill(startActive);
+    const emptyStars = Array(5 - Number(rating)).fill(startInactive);
+    const combinedStars = [...fullStars, ...emptyStars];
 
     return (
         <div className="rating-container">
@@ -22,7 +23,7 @@ function Rating({ name, rating, picture }) {
                 <img src={picture} alt={`${firstName} ${lastName}`} className="owner-picture" />
             </div>
             <div className="rating-stars">
-                {[...fullStars, ...emptyStars].map((star, index) => (
+                {combinedStars.map((star, index) => (
                     <img key={index} src={star}  alt="note" className="star-image"/>
                 ))}
             </div>
@@ -31,3 +32,4 @@ function Rating({ name, rating, picture }) {
 }
 
 export default Rating;
+

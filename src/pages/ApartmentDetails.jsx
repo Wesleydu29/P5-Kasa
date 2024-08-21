@@ -29,8 +29,8 @@ function ApartmentDetails() {
                 <Rating name={apartment.host.name} rating={apartment.rating} picture={apartment.host.picture}/>
             </div>
             <div className="container-collapse-apartment">
-                <Collapse title="description" content={apartment.description}/>
-                <Collapse title="Equipement" content={apartment.equipments.join(', ')}/>
+                <Collapse  className="collapse-apartment" title="Description" content={apartment.description}/>
+                <Collapse  className="collapse-apartment" title="Équipement" content={apartment.equipments.join(', ')}/>
             </div>
         </>
     );

@@ -1,49 +1,48 @@
-.container-collapse {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    gap: 20px;
-}
-
 .collapse {
-    width: 70%;
-    background-color: #FF6060; /* Ajoutez un fond pour mieux voir les éléments */
-    padding: 10px;
+    width: 80%;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .collapse-title {
     display: flex;
-    justify-content: space-between; /* Aligne les éléments aux extrémités */
-    align-items: center; /* Centre verticalement le titre et l'image */
-    color: white; /* Définit la couleur du texte et de l'image en blanc */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #FF6060;
+    cursor: pointer;
+    user-select: none;
 }
 
-h2 {
-    margin: 0; /* Enlève la marge par défaut du h2 */
-    font-size: 18px; /* Taille de la police du titre */
+.collapse-title h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
 }
 
 .arrow {
-    width: 20px; /* Ajustez la taille de l'image */
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    &.rotate {
-        transform: rotate(180deg);
-    }
+    transition: transform 0.3s ease-in-out;
 }
 
-.toggle-content {
-    background-color: #F0F0F0;
-    padding: 16px;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    color: #333; /* Assurez-vous que le contenu est également blanc */
-    margin-top: 10px; /* Un petit espace entre le titre et le contenu */
-    transition: max-height 0.3s ease-in-out;
-    &.open{
-        max-height: 500px;
-    }
+.arrow.rotate {
+    transform: rotate(180deg);
 }
+
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 0 10px;
+    background-color: #F0F0F0;
+}
+
+.collapse-content.open {
+    max-height: 200px; /* Ajustez selon le contenu */
+    padding: 10px;
+}
+
+.collapse-content.closed {
+    max-height: 0;
+    padding: 0 10px;
+}
+
