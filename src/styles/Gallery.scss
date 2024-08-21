@@ -1,26 +1,35 @@
 .gallery-container {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
     background-color: #f0f0f0;
-    padding: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     border-radius: 25px;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+
 }
 
 .apartment-card {
+    width: 370px;
+    height: 370px;
     position: relative; /* Nécessaire pour positionner le titre par rapport à la carte */
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Pour que le contenu qui dépasse soit masqué */
 }
+
 
 .image-card {
     width: 100%;
