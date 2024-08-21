@@ -1,6 +1,11 @@
 .header{
+    padding: 50px;
     display: flex;
     justify-content: space-between;
+    .navbar-logo img {
+        width: 180px;
+        height: auto;
+    }
     .navbar-link {
         display: flex;
         justify-content: center;
@@ -9,12 +14,16 @@
         font-size: 16px;
         gap: 30px;
         & a {
+            font-size: 20px;
+            font-weight: 500;
             text-decoration: none;
+            color: #333;
             &:hover {
                 text-decoration: underline;
             }
             &.active {
                 text-decoration: underline;
+                color: #333;
             }
         }
     }

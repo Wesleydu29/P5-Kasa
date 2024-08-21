@@ -1,9 +1,9 @@
-import Header from "../components/Header"
+
 import Banner from "../components/Banner"
-import Footer from "../components/Footer"
 import image from "../assets/Image source 2.png"
 import Collapse from "../components/Collapse"
 import '../styles/Collapse.scss'
+import '../styles/About.scss'
 
 
 function About() {
@@ -35,8 +35,7 @@ function About() {
         }
       ];
     return(
-        <div>
-        <Header/>
+        <>
         <Banner src={image}/>
         <div>
           <ul className="container-collapse">
@@ -47,9 +46,7 @@ function About() {
             ))}
           </ul>
         </div>
-
-        <Footer/>
-        </div>
+        </>
 
     )
 }

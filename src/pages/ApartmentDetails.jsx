@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { useParams } from 'react-router-dom';
 import ApartmentList from '../datas/ApartmentList.json';
 import Error from './Error';
@@ -24,8 +22,7 @@ function ApartmentDetails() {
     }
 
     return (
-        <div>
-            <Header />
+        <>
             <CarouselBanner images={apartment.pictures} className="apartment-banner" />
             <div className="apartment-info-container">
                 <ApartmentInfo title={apartment.title} location={apartment.location} tags={apartment.tags}/>
@@ -35,8 +32,7 @@ function ApartmentDetails() {
                 <Collapse title="description" content={apartment.description}/>
                 <Collapse title="Equipement" content={apartment.equipments.join(', ')}/>
             </div>
-            <Footer />
-        </div>
+        </>
     );
 }
 

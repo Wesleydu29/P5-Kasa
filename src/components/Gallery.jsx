@@ -13,10 +13,8 @@ function Gallery() {
                             <Link to={`/apartment/${apartment.id}`}>{apartment.title}</Link>
                         </li>
                     ))}
-
             </ul>
         </div>
     )
-
 }
 export default Gallery

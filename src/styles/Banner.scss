@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
     color: white;
     height: 223px;
     border-radius: 25px;
@@ -16,7 +15,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: brightness(0.5); /* Applique une opacité plus sombre à l'image */
+        filter: brightness(0.4); /* Applique une opacité plus sombre à l'image */
     }
 
     h1 {

@@ -4,17 +4,23 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Error from './pages/Error';
 import ApartmentDetails from './pages/ApartmentDetails';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div>
       <Router>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='*' element={<Error/>}/> 
-          <Route path='/apartment/:id' element={<ApartmentDetails/>}/>
-        </Routes>
+        <Header/>
+        <main>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='*' element={<Error/>}/> 
+            <Route path='/apartment/:id' element={<ApartmentDetails/>}/>
+          </Routes>
+        </main>
+        <Footer/>
       </Router>
     </div>
   );
@@ -22,4 +28,4 @@ function App() {
 
 export default App;
 
-// le * sert a capturer toutes les URL non définies dans l'application
+// le * sert à capturer toutes les URL non définies dans l'application
