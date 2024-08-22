@@ -30,7 +30,15 @@ function ApartmentDetails() {
             </div>
             <div className="container-collapse-apartment">
                 <Collapse  className="collapse-apartment" title="Description" content={apartment.description}/>
-                <Collapse  className="collapse-apartment" title="Équipement" content={apartment.equipments.join(', ')}/>
+                <Collapse  className="collapse-apartment" title="Équipement" 
+                content={
+                <ul>
+                    {apartment.equipments.map((equipments, index) =>(
+                        <li key={index}>{equipments}</li>
+                    ))}
+                    </ul>
+                }
+                />
             </div>
         </>
     );

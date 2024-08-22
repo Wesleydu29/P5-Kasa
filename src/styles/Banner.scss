@@ -1,9 +1,11 @@
+@import '../styles/variables.scss';
+
 .banner {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: $white-Color;
     height: 223px;
     border-radius: 25px;
     overflow: hidden;

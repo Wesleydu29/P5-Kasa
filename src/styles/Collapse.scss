@@ -1,48 +1,54 @@
+@import '../styles/variables.scss';
+
 .collapse {
     width: 80%;
     border-radius: 5px;
     overflow: hidden;
+    @media screen and (max-width: 768px){
+        width: 100%;
+    }
+
+    .collapse-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: $main-Color;
+        cursor: pointer;
+        user-select: none;
+
+        h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: $white-Color;
+        }
+    }
+
+    .arrow {
+        transition: transform 0.3s ease-in-out;
+
+        &.rotate {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .collapse-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        padding: 0 10px;
+        background-color: $content-Color;
+
+        &.open {
+            max-height: 200px; /* Ajustez selon le contenu */
+            padding: 20px;
+        }
+
+        &.closed {
+            max-height: 0;
+            padding: 0 10px;
+        }
+    }
 }
 
-.collapse-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #FF6060;
-    cursor: pointer;
-    user-select: none;
-}
-
-.collapse-title h2 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: white;
-}
-
-.arrow {
-    transition: transform 0.3s ease-in-out;
-}
-
-.arrow.rotate {
-    transform: rotate(180deg);
-}
-
-.collapse-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-    padding: 0 10px;
-    background-color: #F0F0F0;
-}
-
-.collapse-content.open {
-    max-height: 200px; /* Ajustez selon le contenu */
-    padding: 10px;
-}
-
-.collapse-content.closed {
-    max-height: 0;
-    padding: 0 10px;
-}
 

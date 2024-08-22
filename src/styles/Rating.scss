@@ -1,46 +1,55 @@
+@import '../styles/variables.scss';
+
 .rating-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 20px;
-}
+    @media screen and (max-width: 768px){
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        
+    }
 
-.owner-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
+    .owner-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
 
-.owner-name {
-    margin-right: 10px;
-}
+        .owner-name {
+            
+            margin-right: 10px;
 
-.owner-name p {
-    color: #FF6060;
-    font-size: 20px;
-    margin: 0;
-}
+            p {
+                display: flex;
+                justify-content: flex-end;
+                color: $main-Color;
+                font-size: 20px;
+                margin: 0;
+            }
+        }
 
-.owner-picture {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
+        .owner-picture {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+    }
 
-.rating-stars {
-    display: flex;
-}
+    .rating-stars {
+        .star {
+            font-size: 24px;
+            margin-right: 5px;
 
-.star {
-    font-size: 24px;
-    margin-right: 5px;
-}
+            &.star-full {
+                color: $main-Color; // Couleur pour les étoiles pleines
+            }
 
-.star-full {
-    color: #FF6060; /* Couleur pour les étoiles pleines */
+            &.star-empty {
+                color: #F0F0F0; // Couleur pour les étoiles vides
+            }
+        }
+    }
 }
-
-.star-empty {
-    color: #F0F0F0; /* Couleur pour les étoiles vides */
-}
-
