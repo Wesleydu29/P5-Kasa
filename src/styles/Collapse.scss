@@ -36,7 +36,7 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-        padding: 0 10px;
+        padding: 0 20px;
         background-color: $content-Color;
 
         &.open {
@@ -46,7 +46,6 @@
 
         &.closed {
             max-height: 0;
-            padding: 0 10px;
         }
     }
 }
